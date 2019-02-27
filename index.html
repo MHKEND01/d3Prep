@@ -1,0 +1,21 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>D3 Page Template</title>
+      <script type="text/javascript" src="d3.js"></script>
+  </head>
+  <body>
+    <ol></ol>
+    <script type = "text/javascript">
+    var animalArray = ["Dragon", "Griffin", "Pegasus", "Phoenix", "Platapus"];
+    d3.select("body")
+      .select("ol")
+      .selectAll("li")
+      .data(animalArray)
+      .enter()
+      .append("li")
+      .text(function(d){return d});
+    </script>
+  </body>
+</html>
